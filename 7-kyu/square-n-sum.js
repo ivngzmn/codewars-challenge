@@ -15,3 +15,11 @@ For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 
 
 */
+function squareSum(numbers) {
+    return numbers.reduce((sum, num) => (sum += num * num), 0);
+}
+
+console.log(squareSum([1, 2, 2])); // Expected result 9
+console.log(squareSum([1, 2])); // Expected result 5
+console.log(squareSum([0, 3, 4, 5])); // Expected result 50
+console.log(squareSum([])); // Expected result 0
