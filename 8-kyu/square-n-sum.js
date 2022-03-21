@@ -11,9 +11,9 @@ Complete the square sum function so that it squares each number passed into it a
 */
 
 function squareSum(numbers) {
-  let sum = 0;
-  numbers.forEach((number) => {
-    sum += number * number;
-  });
-  return sum;
+    let sum = 0;
+    numbers.forEach((number) => {
+        sum += number * number;
+    });
+    return sum;
 }
