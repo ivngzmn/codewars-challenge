@@ -5,25 +5,18 @@
 ██║░░██╗██║░░██║██║░░██║██╔══╝░░░░████╔═████║░██╔══██║██╔══██╗░╚═══██╗
 ╚█████╔╝╚█████╔╝██████╔╝███████╗░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██████╔╝
 ░╚════╝░░╚════╝░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░
-kata URL: https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
-Kata title: Grasshopper - Summation
+kata URL: https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/javascript
+Kata title: Remove String Spaces
 
-Summation
-
-Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
-
-For example:
-
-summation(2) -> 3
-1 + 2
-
-summation(8) -> 36
-1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
-
+Simple, remove the spaces from the string, then return the resultant string.
 */
 
-const summation = (num) => (num * (num + 1)) / 2; // Gauss Formula
+function noSpace(x) {
+    return x.split(' ').join('');
+}
 
-console.log(summation(1)); // Expected result 1
-console.log(summation(2)); // Expected result 3
-console.log(summation(8)); // Expected result 36
+console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B')); // expected result'8j8mBliB8gimjB8B8jlB'
+
+console.log(noSpace('8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd')); // expected result '88Bifk8hB8BB8BBBB888chl8BhBfd'
+
+console.log(noSpace('8aaaaa dddd r     ')); // expected result'8aaaaaddddr'
