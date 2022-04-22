@@ -46,6 +46,8 @@ function DNAStrand(dna) {
 }
 
 console.log(DNAStrand(''), '');
+console.log(DNAStrand('ATGC'), 'TACG');
+console.log(DNAStrand('TTTT'), 'AAAA');
 console.log(DNAStrand('AAAA'), 'TTTT');
 console.log(DNAStrand('ATTGC'), 'TAACG');
 console.log(DNAStrand('GTAT'), 'CATA');
