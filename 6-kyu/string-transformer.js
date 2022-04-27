@@ -5,30 +5,38 @@
 ██║░░██╗██║░░██║██║░░██║██╔══╝░░░░████╔═████║░██╔══██║██╔══██╗░╚═══██╗
 ╚█████╔╝╚█████╔╝██████╔╝███████╗░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║██████╔╝
 ░╚════╝░░╚════╝░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░
-kata URL: https://www.codewars.com/kata/59e66e48fc3c499ec5000103
-Kata title: Array combinations
+kata URL: https://www.codewars.com/kata/5878520d52628a092f0002d0/
+Kata title: String transformer
 
 Instructions
-In this Kata, you will be given an array of arrays and your task will be to return the number of unique arrays that can be formed by picking exactly one element from each subarray.
+Given a string, return a new string that has transformed based on the input:
 
-For example: solve([[1,2],[4],[5,6]]) = 4, because it results in only 4 possibilities. They are [1,4,5],[1,4,6],[2,4,5],[2,4,6].
+    Change case of every character, ie. lower case to upper case, upper case to lower case.
+    Reverse the order of words from the input.
 
-Make sure that you don't count duplicates; for example solve([[1,2],[4,4],[5,6,6]]) = 4, since the extra outcomes are just duplicates.
+Note: You will have to handle multiple spaces, and leading/trailing spaces.
 
-See test cases for more examples.
+For example:
 
-Good luck!
+"Example Input" ==> "iNPUT eXAMPLE"
+
+You may assume the input only contain English alphabet and spaces.
+
 */
 
-// function solve(arr) {
-//     return arr.reduce((res, curr) => (res *= new Set(curr).size), 1);
-// }
-
-// alternate solution with map, Set and reduce
-function solve(arr) {
-    return arr
-        .map((el) => new Set(el).size)
-        .reduce((acc, curr) => acc * curr, 1);
+function stringTransformer(str) {
+    return str
+        .split(' ')
+        .reverse()
+        .join(' ')
+        .split('')
+        .map((letter) =>
+            letter === letter.toUpperCase()
+                ? letter.toLowerCase()
+                : letter.toUpperCase()
+        )
+        .join('');
 }
 
-console.log(solve([[1, 2], [4], [5, 6]]));
+console.log(stringTransformer('Example string'), 'STRING eXAMPLE');
+console.log(stringTransformer('Example Input'), 'iNPUT eXAMPLE');
