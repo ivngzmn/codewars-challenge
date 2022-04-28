@@ -1,5 +1,7 @@
 # CodeWars
 
+![Codewars badge](https://www.codewars.com/users/zaku_dev/badges/large)
+
 ## Ivan Guzman
 
 My goal is to put down as much code as possible.
