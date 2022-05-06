@@ -15,4 +15,6 @@ Note: Empty arrays should return 0.
 
 */
 
-function find_average(arr) {}
+function find_average(arr) {
+    return;
+}
