@@ -1,6 +1,6 @@
 # CodeWars
 
-![Codewars badge](https://www.codewars.com/users/zaku_dev/badges/large)
+![Codewars badge](https://www.codewars.com/users/inadequateDev/badges/large)
 
 ## Ivan Guzman
 
