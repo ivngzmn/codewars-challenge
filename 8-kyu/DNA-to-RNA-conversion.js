@@ -24,9 +24,12 @@ The input string can be of arbitrary length - in particular, it may be empty. Al
 */
 
 function dnaToRNA(dna) {
-    return;
+    return dna
+        .split('')
+        .map((char) => (char === 'T' ? 'U' : char))
+        .join('');
 }
 
-console.log(DNAtoRNA('TTTT'), 'UUUU');
-console.log(DNAtoRNA('GCAT'), 'GCAU');
-console.log(DNAtoRNA('GACCGCCGCC'), 'GACCGCCGCC');
+console.log(dnaToRNA('TTTT'), 'UUUU');
+console.log(dnaToRNA('GCAT'), 'GCAU');
+console.log(dnaToRNA('GACCGCCGCC'), 'GACCGCCGCC');
