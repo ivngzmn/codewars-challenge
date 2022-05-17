@@ -49,7 +49,7 @@ function nbYear(p0, percent, aug, p) {
     //loop until beginning population >= final population
     for (let i = 0; p0 < p; i++) {
         p0 = p0 + p0 * (percent / 100) + aug;
-        // add to year count
+        // add to year count ** got stuck here last time and had to look up answer and went with while loop but love for loops better
         year++;
     }
     // return num years it takes for p0 >= p
