@@ -29,5 +29,5 @@ function areaOrPerimeter(length, width) {
     // else (length + width) * 2
 }
 
-console.log(areaOrPerimeter(6, 10)); // != return 32
-console.log(areaOrPerimeter(3, 3)); // == return 9
+console.log(areaOrPerimeter(6, 10)); // l != w return 32
+console.log(areaOrPerimeter(3, 3)); // l == w return 9
