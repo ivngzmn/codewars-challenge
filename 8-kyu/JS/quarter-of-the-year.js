@@ -16,7 +16,9 @@ For example: month 2 (February), is part of the first quarter; month 6 (June), i
 //PREP
 //
 
-const quarterOf = (month) => {};
+const quarterOf = (month) => {
+    return Math.ceil(month / 3);
+};
 
 console.log(quarterOf(3)); // 1st quarter
 console.log(quarterOf(8)); // 3rd quarter
