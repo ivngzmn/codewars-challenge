@@ -26,3 +26,26 @@ String.prototype.toJadenCase = function () {
         .map((word) => word[0].toUpperCase() + word.slice(1))
         .join(' ');
 };
+
+// for loop solution
+//PREP
+//P: Numbers? Nah, String? Yeah, any crazy inputs? Nah
+//R: The string function should return every word with the first letter capitalized
+//E: see example below
+String.prototype.toJadenCase = function () {
+    // set jaden to this str prototype and split the incoming string
+    let jaden = this.split(' ');
+    // loop through each word
+    for (let i = 0; i < jaden.length; i++) {
+        // once we iterate through each word we will get the first letter and capitalize it
+        // then we will add the rest of the word and move to the next word
+        jaden[i] = jaden[i][0].toUpperCase() + jaden[i].slice(1);
+    }
+    // now we will join the string that we split
+    return jaden.join(' ');
+};
+
+let str = "How can mirrors be real if our eyes aren't real";
+
+//E:
+console.log(str.toJadenCase()); // --> How Can Mirrors Be Real If Our Eyes Aren't Real
