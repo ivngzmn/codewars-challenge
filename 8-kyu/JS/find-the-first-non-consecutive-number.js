@@ -31,3 +31,5 @@ Julia: nothing
 Nim: none(int) (See options)
 */
 //PREP
+// nums? Yes, non nums? No, whole nums? Yes
+// We will return the first
