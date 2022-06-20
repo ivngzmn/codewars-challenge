@@ -32,4 +32,15 @@ Nim: none(int) (See options)
 */
 //PREP
 // nums? Yes, non nums? No, whole nums? Yes
-// We will return the first
+// We will return the first non consecutive number
+
+function firstNonConsecutive(arr) {
+    // find the first non consecutive number
+    const result = arr.find((element, index) => element !== index + arr[0]);
+    // return result but will return null if arr empty
+    return Number.isInteger(result) ? result : null;
+}
+
+console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]), 6); // first non consecutive is 6
+console.log(firstNonConsecutive([1]), null); // --> null
+console.log(firstNonConsecutive([]), null); // --> null
