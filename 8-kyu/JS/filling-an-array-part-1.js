@@ -20,9 +20,21 @@ arr(5) // => [0,1,2,3,4]
 Note: The parameter is optional. So you have to give it a default value.
 */
 //PREP
-//
-//
-//
-//
-//
-//
+// int? Y, Strings? N, floating? N
+// Return int that is passed in and create arr with the count 0 to N-1
+
+const arr = (N) => {
+  // set our empty arr
+  let arrContents = [];
+  // count from 0 and push to arr
+  for (let i = 0; i < N; i++) {
+    arrContents.push(i);
+  }
+  return arrContents;
+};
+
+// const arr = (N) => Array.from({ length: N }, (_, i) => i); // cray cray solution
+// Example
+console.log(arr(4));
+console.log(arr());
+console.log(arr(5));
