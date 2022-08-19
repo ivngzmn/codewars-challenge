@@ -22,3 +22,4 @@ function getAge(inputString) {
 }
 
 console.log(getAge('4 years old'), 4);
+console.log(getAge('5 years old'), 5);
