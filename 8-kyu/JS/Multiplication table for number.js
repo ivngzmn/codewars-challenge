@@ -30,14 +30,22 @@ Note: newlines should be added between rows, but there should be no trailing new
 
 */
 
-function multiTable(number) {
-    let str = ''
-    for(let i = 0; i < 10; i++) {
-        str += `${i + 1} * ${number} = ${number * i + number}\n`
-    }
-    return str.slice(0, -1)
+// function multiTable(number) {
+//     let str = ''
+//     for(let i = 0; i < 10; i++) {
+//         str += `${i + 1} * ${number} = ${number * i + number}\n`
+//     }
+//     return str.slice(0, -1)
+// }
 
+function multiTable(number) {
+  let table = [];
+  for (let i = 1; i <= 10; i++) {
+    table.push(`${i} * ${number} = ${i * number}`);
+  }
+  return table.join('\n');
 }
 
-console.log(multiTable(5))
-console.log(multiTable(1))
+console.log(multiTable(5));
+console.log(multiTable(8));
+// console.log(multiTable(1));
