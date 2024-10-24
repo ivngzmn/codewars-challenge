@@ -23,9 +23,11 @@ console.time('checkExam');
 
 function checkExam(array1, array2) {
   // set var for the score
-  // check each key value pair if key === value += 4, if incorrect answer += -1, if value is empty string += 0
+  // check each value, if value === value += 4, if incorrect answer += -1, if value is empty string += 0
   // if returned score is < 0 return 0
+
   let score = 0;
+
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] === array2[i]) {
       score += 4;
@@ -35,6 +37,7 @@ function checkExam(array1, array2) {
       score += 0;
     }
   }
+
   return score > 0 ? score : 0;
 }
 
