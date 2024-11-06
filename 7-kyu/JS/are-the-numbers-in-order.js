@@ -22,13 +22,27 @@ P
 */
 
 function inAscOrder(arr) {
-  // ensure not to mutate the original array
+  // note: ensure not to mutate the original array
+  // check arr length arr length <= 1 return true
+  if (arr.length <= 1) {
+    return true;
+  }
+  // loop through arr
+  for (let i = 0; i < arr.length; i++) {
+    // if current val > next val return false
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  // return true
+  return true;
+  // this solution runs in O(n) as we do not need to do any sorting
 
-  return (
-    Array(...arr)
-      .sort((a, b) => a - b)
-      .toString() === arr.toString()
-  );
+  //   return (
+  //     Array(...arr)
+  //       .sort((a, b) => a - b)
+  //       .toString() === arr.toString()
+  //   );
 }
 
 console.log(inAscOrder([1, 2, 3, 4, 7, 19]), true); // return true
