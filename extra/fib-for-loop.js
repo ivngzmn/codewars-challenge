@@ -31,7 +31,7 @@ function fib(numGenerated) {
     let b = sequence[i - 2];
     sequence.push(a + b);
   }
-  return sequence[sequence.length - 1];
+  return sequence[numGenerated];
 }
 
 console.log(fib(3), '2');
