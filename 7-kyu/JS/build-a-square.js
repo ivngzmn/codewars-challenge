@@ -36,3 +36,5 @@ function generateShape(integer) {
 console.log(generateShape(8));
 console.log(generateShape(3));
 console.log(generateShape(2));
+
+// brute force solution blah
